@@ -9,7 +9,7 @@ import {
 	TouchableOpacity
 } from "react-native";
 import ProfileItem from "./ProfileItem";
-import Icon from '../common/Icon';
+import Icon from "react-native-vector-icons/Entypo";
 import Demo from "../../data/demo.js";
 import { Actions } from "react-native-router-flux";
 
@@ -43,13 +43,13 @@ class  Profile extends Component {
 					<View style={styles.top}>
 						<TouchableOpacity>
 							<Text style={styles.topIconLeft}>
-								<Icon name="chevronLeft" />
+								<Icon name="chevron-thin-left" size={20}  />
 							</Text>
 						</TouchableOpacity>
 
 						<TouchableOpacity>
 							<Text style={styles.topIconRight}>
-								<Icon name="optionsV" />
+								<Icon name="dots-three-vertical" />
 							</Text>
 						</TouchableOpacity>
 					</View>
@@ -69,7 +69,7 @@ class  Profile extends Component {
 				<View style={styles.actionsProfile}>
 					<TouchableOpacity style={styles.circledButton}>
 						<Text style={styles.iconButton}>
-							<Icon name="optionsH" />
+							<Icon name="dots-three-vertical" />
 						</Text>
 					</TouchableOpacity>
 

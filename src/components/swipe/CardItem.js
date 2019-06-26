@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import styles from "../../styles";
 
 import { Text, View, Image, Dimensions, TouchableOpacity } from "react-native";
-import Icon from "react-native-vector-icons/AntDesign";
+import Icon from "react-native-vector-icons/FontAwesome5";
 import { Actions } from "react-native-router-flux";
 
 class  CardItem  extends Component {
@@ -29,7 +29,7 @@ class  CardItem  extends Component {
 		{
 			borderRadius: 8,
 			width: variant ? fullWidth / 2 - 30 : fullWidth - 80,
-			height: variant ? 170 : 350,
+			height: variant ? 170 : 220,
 			margin: variant ? 0 : 20
 		}
 	];
@@ -54,7 +54,7 @@ class  CardItem  extends Component {
 			{matches && (
 				<View style={styles.matchesCardItem}>
 					<Text style={styles.matchesTextCardItem}>
-						<Icon name="heart" size={30} color="#900"/> {matches}% Match!
+						<Icon name="laugh" size={16} color="#FFFFFF"/> {matches}% Match!
 					</Text>
 				</View>
 			)}
@@ -76,59 +76,34 @@ class  CardItem  extends Component {
 			)}
 
 			{/* ACTIONS */}
-			{actions && (
+		 {actions && (
 				<View style={styles.actionsCardItem}>
-					<TouchableOpacity style={styles.miniButton}>
-						<Text style={styles.star}>
-							<Icon name="star" size={30} color="#900" />
-						</Text>
-					</TouchableOpacity>
-
-					<TouchableOpacity style={styles.button} onPress={() => onPressLeft()}>
+					
+					<TouchableOpacity style={styles.button} onPress={() => onPressRight()}>
 						<Text style={styles.like}>
-							<Icon name="like" />
+							<Icon name="thumbs-up" size={30} color="#283" />
 						</Text>
 					</TouchableOpacity>
 
 					<TouchableOpacity
 						style={styles.button}
-						onPress={() => onPressRight()}
+						onPress={() => onPressLeft()}
 					>
 						<Text style={styles.dislike}>
-							<Icon name="dislike" />
+							<Icon name="thumbs-down" size={30} color="#900" />
 						</Text>
 					</TouchableOpacity>
 
 					<TouchableOpacity style={styles.miniButton}>
-						<Text style={styles.flash}>
-							<Icon name="flash" />
+						<Text style={styles.refresh}>
+							<Icon name="redo"size={27} color="#2c1dc4"  />
 						</Text>
 					</TouchableOpacity>
 				</View>
 
 				
 		
-			)}
-				{/*	<View style={styles.footer}>
-				<View style={styles.buttonContainer}>
-				<TouchableOpacity style={[styles.button,styles.red]} onPress={()=>{
-					this.swiper.swipeLeft();
-				}}>
-					<Image source={require('./assets/red.png')} resizeMode={'contain'} style={{ height: 62, width: 62 }} />
-				</TouchableOpacity>
-				<TouchableOpacity style={[styles.button,styles.orange]} onPress={() => {
-					this.swiper.goBackFromLeft();
-				}}>
-					<Image source={require('./assets/back.png')} resizeMode={'contain'} style={{ height: 32, width: 32, borderRadius: 5 }} />
-				</TouchableOpacity>
-				<TouchableOpacity style={[styles.button,styles.green]} onPress={()=>{
-					this.swiper.swipeRight();
-				}}>
-					<Image source={require('./assets/green.png')} resizeMode={'contain'} style={{ height: 62, width: 62 }} />
-				</TouchableOpacity>
-				</View>
-
-			</View> */}
+		 )} 
 		</View>
 	);
 }

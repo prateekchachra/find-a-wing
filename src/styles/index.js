@@ -1,6 +1,6 @@
 import { StyleSheet, Dimensions } from "react-native";
 
-const PRIMARY_COLOR = "#7444C0";
+const PRIMARY_COLOR = "#12b8a5";
 const SECONDARY_COLOR = "#5636B8";
 const WHITE = "#FFFFFF";
 const GRAY = "#757E90";
@@ -9,13 +9,6 @@ const BLACK = "#000000";
 
 const ONLINE_STATUS = "#46A575";
 const OFFLINE_STATUS = "#D04949";
-
-const STAR_ACTIONS = "#FFA200";
-const LIKE_ACTIONS = "#B644B2";
-const DISLIKE_ACTIONS = "#363636";
-const FLASH_ACTIONS = "#5028D7";
-
-const ICON_FONT = "tinderclone";
 
 const DIMENSION_WIDTH = Dimensions.get("window").width;
 const DIMENSION_HEIGHT = Dimensions.get("window").height;
@@ -26,22 +19,17 @@ export default StyleSheet.create({
 		backgroundColor: WHITE,
 		borderRadius: 8,
 		alignItems: "center",
-		margin: 10,
 		shadowOpacity: 0.05,
 		shadowRadius: 10,
 		shadowColor: BLACK,
 		shadowOffset: { height: 0, width: 0 }
 	},
 	matchesCardItem: {
-		marginTop: -35,
+		marginTop: -10,
 		backgroundColor: PRIMARY_COLOR,
 		paddingVertical: 7,
 		paddingHorizontal: 20,
 		borderRadius: 20
-	},
-	matchesTextCardItem: {
-		fontFamily: ICON_FONT,
-		color: WHITE
 	},
 	descriptionCardItem: {
 		color: GRAY,
@@ -101,40 +89,38 @@ export default StyleSheet.create({
 		shadowColor: DARK_GRAY,
 		shadowOffset: { height: 10, width: 0 }
 	},
-	star: {
-		fontFamily: ICON_FONT,
-		color: STAR_ACTIONS
+	matchesTextCardItem: {
+		fontFamily: 'arial',
+		color: '#FFFFFF',
+
 	},
 	like: {
-		fontSize: 25,
-		fontFamily: ICON_FONT,
-		color: LIKE_ACTIONS
+		marginBottom: 10
 	},
 	dislike: {
-		fontSize: 25,
-		fontFamily: ICON_FONT,
-		color: DISLIKE_ACTIONS
 	},
-	flash: {
-		fontFamily: ICON_FONT,
-		color: FLASH_ACTIONS
+	refresh: {
+		marginLeft: 10,
+		marginBottom: 5
 	},
-
+	noMoreCards: {
+		flex: 1,
+		fontWeight:'600', 
+		fontSize:18, 
+		color:'gray',
+		alignItems: 'center',
+		justifyContent: 'center',
+		
+},
 	// COMPONENT - CITY
 	city: {
 		backgroundColor: WHITE,
 		padding: 10,
 		borderRadius: 20,
-		width: 90,
 		shadowOpacity: 0.05,
 		shadowRadius: 10,
 		shadowColor: BLACK,
 		shadowOffset: { height: 0, width: 0 }
-	},
-	cityText: {
-		fontFamily: ICON_FONT,
-		color: DARK_GRAY,
-		fontSize: 13
 	},
 
 	// COMPONENT - FILTERS
@@ -148,12 +134,6 @@ export default StyleSheet.create({
 		shadowColor: BLACK,
 		shadowOffset: { height: 0, width: 0 }
 	},
-	filtersText: {
-		fontFamily: ICON_FONT,
-		color: DARK_GRAY,
-		fontSize: 13
-	},
-
 	// COMPONENT - MESSAGE
 	containerMessage: {
 		flex: 1,
@@ -176,6 +156,34 @@ export default StyleSheet.create({
 		paddingTop: 5
 	},
 
+
+	//NAVIGATION
+	navRight: {
+	color:'#000000'	,
+	fontSize: 14,
+	paddingTop: 5
+
+	},
+	navLeft: {
+		color:'#000000'	,
+		fontSize: 14,
+		paddingTop: 5
+		
+		},
+		
+		navTitle: {
+			alignItems: 'center',
+			fontWeight: 'normal',
+			paddingLeft: 55
+		},
+		navAroundMe: {
+			alignItems: 'center',
+			fontWeight: 'normal',
+			paddingLeft: 10	
+		},
+
+
+
 	// COMPONENT - PROFILE ITEM
 	containerProfileItem: {
 		backgroundColor: WHITE,
@@ -190,7 +198,7 @@ export default StyleSheet.create({
 		shadowOffset: { height: 0, width: 0 }
 	},
 	matchesProfileItem: {
-		width: 131,
+		width: 140,
 		marginTop: -15,
 		backgroundColor: PRIMARY_COLOR,
 		paddingVertical: 7,
@@ -198,10 +206,6 @@ export default StyleSheet.create({
 		borderRadius: 20,
 		textAlign: "center",
 		alignSelf: "center"
-	},
-	matchesTextProfileItem: {
-		fontFamily: ICON_FONT,
-		color: WHITE
 	},
 	name: {
 		paddingTop: 25,
@@ -222,7 +226,6 @@ export default StyleSheet.create({
 		alignItems: "center"
 	},
 	iconProfile: {
-		fontFamily: ICON_FONT,
 		fontSize: 12,
 		color: DARK_GRAY,
 		paddingHorizontal: 10
@@ -240,19 +243,13 @@ export default StyleSheet.create({
 		height: DIMENSION_HEIGHT
 	},
 	top: {
-		paddingTop: 50,
 		marginHorizontal: 10,
 		flexDirection: "row",
 		justifyContent: "space-between",
 		alignItems: "center"
 	},
 	title: { paddingBottom: 10, fontSize: 22, color: DARK_GRAY },
-	icon: {
-		fontFamily: ICON_FONT,
-		fontSize: 20,
-		color: DARK_GRAY,
-		paddingRight: 10
-	},
+
 
 	// CONTAINER - HOME
 	containerHome: { marginHorizontal: 10 },
@@ -268,7 +265,8 @@ export default StyleSheet.create({
 	containerMessages: {
 		justifyContent: "space-between",
 		flex: 1,
-		paddingHorizontal: 10
+		paddingHorizontal: 10,
+		paddingTop: 20
 	},
 
 	// CONTAINER - PROFILE
@@ -277,31 +275,11 @@ export default StyleSheet.create({
 		width: DIMENSION_WIDTH,
 		height: 450
 	},
-	topIconLeft: {
-		fontFamily: ICON_FONT,
-		fontSize: 20,
-		color: WHITE,
-		paddingLeft: 20,
-		marginTop: -20,
-		transform: [{ rotate: "90deg" }]
-	},
-	topIconRight: {
-		fontFamily: ICON_FONT,
-		fontSize: 20,
-		color: WHITE,
-		paddingRight: 20
-	},
+
 	actionsProfile: {
 		justifyContent: "center",
 		flexDirection: "row",
 		alignItems: "center"
-	},
-	iconButton: { fontFamily: ICON_FONT, fontSize: 20, color: WHITE },
-	textButton: {
-		fontFamily: ICON_FONT,
-		fontSize: 15,
-		color: WHITE,
-		paddingLeft: 5
 	},
 	circledButton: {
 		width: 50,
@@ -334,9 +312,5 @@ export default StyleSheet.create({
 	tabButtonText: {
 		textTransform: "uppercase"
 	},
-	iconMenu: {
-		fontFamily: ICON_FONT,
-		height: 20,
-		paddingBottom: 7
-	}
+
 });

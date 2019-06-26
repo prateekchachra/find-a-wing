@@ -10,7 +10,7 @@ import {
 	FlatList
 } from "react-native";
 import Message from "./Message";
-import Icon from "../common/Icon";
+import Icon from "react-native-vector-icons/Entypo";
 import Demo from "../..//data/demo.js";
 import { Actions } from "react-native-router-flux";
 
@@ -34,7 +34,7 @@ class Messages extends Component {
 						<Text style={styles.title}>Messages</Text>
 						<TouchableOpacity>
 							<Text style={styles.icon}>
-								<Icon name="optionsV" />
+								<Icon name="dots-three-vertical" />
 							</Text>
 						</TouchableOpacity>
 					</View>

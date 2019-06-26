@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../../styles";
 
 import { Text, View } from "react-native";
-import Icon from "../common/Icon";
+import Icon from "react-native-vector-icons/FontAwesome5";
 
 const ProfileItem = ({
 	age,
@@ -17,8 +17,8 @@ const ProfileItem = ({
 	return (
 		<View style={styles.containerProfileItem}>
 			<View style={styles.matchesProfileItem}>
-				<Text style={styles.matchesTextProfileItem}>
-					<Icon name="heart" /> {matches}% Match!
+				<Text style={styles.matchesTextCardItem}>
+				<Icon name="laugh" size={16} color="#FFFFFF"/> {matches}% Match!
 				</Text>
 			</View>
 

@@ -21,7 +21,9 @@ export default class SwipePeople extends Component {
         <CardStack
           style={styles.content}
 
-          renderNoMoreCards={() => (<Text style={{fontWeight:'700', fontSize:18, color:'gray'}}>
+          renderNoMoreCards={() => (
+          
+          <Text style={styles.noMoreCards}>
               No more wings available in this area! Please check back again!
           </Text>)}
             loop={true}

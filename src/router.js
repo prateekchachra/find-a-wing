@@ -6,6 +6,8 @@ import SwipePeople from './components/swipe/SwipePeople';
 import Profile from './components/profile/Profile';
 import PeopleAroundMe from './components/people/PeopleAroundMe';
 import Messages from './components/messages/Messages';
+import styles from './styles';
+import SetLocation from './components/common/SetLocation';
 const RouterComponent = () => {
 
     return(
@@ -18,6 +20,10 @@ const RouterComponent = () => {
     </Scene> */}
             <Scene key="main">
             <Scene key="swipeScreen" initial
+            rightButtonTextStyle={styles.navRight}
+            leftButtonTextStyle={styles.navLeft}
+            titleStyle={styles.navTitle}
+            
                 leftTitle="My Messages"
                 onLeft={() => {
                     Actions.userMessages();
@@ -28,6 +34,9 @@ const RouterComponent = () => {
                  }}
             component={SwipePeople} title="Find A Wing" ></Scene>           
             <Scene key="aroundMe"
+             rightButtonTextStyle={styles.navRight}
+             leftButtonTextStyle={styles.navLeft}
+             titleStyle={styles.navAroundMe}
                 rightTitle="Find A Wing"
                 onRight={() => {
                    Actions.swipeScreen();
@@ -35,12 +44,18 @@ const RouterComponent = () => {
             component={PeopleAroundMe} title="People Around You"></Scene>
 
             <Scene key="chat" 
+             titleStyle={styles.navAroundMe}
             component={ChatWindow} title="Chat with your match!"></Scene>
             <Scene key="userProfile" 
+             titleStyle={styles.navAroundMe}
             component={Profile} title="View Profile"></Scene>
-            <Scene key="userMessages" 
-            component={Messages} title="My Messages"></Scene>
 
+            <Scene key="userMessages" 
+             titleStyle={styles.navAroundMe}     
+            component={Messages} title="My Messages"></Scene>
+            <Scene key="location" 
+             titleStyle={styles.navAroundMe}     
+            component={SetLocation} title="Select Location"></Scene>
 
 
              </Scene>
