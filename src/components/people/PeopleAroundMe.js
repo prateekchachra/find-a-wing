@@ -22,7 +22,6 @@ const Matches = () => {
 			<View style={styles.containerMatches}>
 				<ScrollView>
 					<View style={styles.top}>
-						<Text style={styles.title}>Matches</Text>
 						<TouchableOpacity>
 							<Text style={styles.icon}>
 								<Icon name="options-vertical" />

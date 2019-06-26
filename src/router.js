@@ -34,13 +34,7 @@ const RouterComponent = () => {
                  }}
             component={SwipePeople} title="Find A Wing" ></Scene>           
             <Scene key="aroundMe"
-             rightButtonTextStyle={styles.navRight}
-             leftButtonTextStyle={styles.navLeft}
              titleStyle={styles.navAroundMe}
-                rightTitle="Find A Wing"
-                onRight={() => {
-                   Actions.swipeScreen();
-                }}
             component={PeopleAroundMe} title="People Around You"></Scene>
 
             <Scene key="chat" 

@@ -40,6 +40,9 @@ export default StyleSheet.create({
 		flexDirection: "row",
 		alignItems: "center"
 	},
+	map: {
+
+	},
 	statusText: {
 		color: GRAY,
 		fontSize: 12
