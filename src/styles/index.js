@@ -1,7 +1,7 @@
 import { StyleSheet, Dimensions } from "react-native";
 
 const PRIMARY_COLOR = "#12b8a5";
-const SECONDARY_COLOR = "#5636B8";
+const SECONDARY_COLOR = "#50bcde";
 const WHITE = "#FFFFFF";
 const GRAY = "#757E90";
 const DARK_GRAY = "#363636";
@@ -288,7 +288,7 @@ export default StyleSheet.create({
 		width: 50,
 		height: 50,
 		borderRadius: 25,
-		backgroundColor: PRIMARY_COLOR,
+		backgroundColor: SECONDARY_COLOR,
 		justifyContent: "center",
 		alignItems: "center",
 		marginRight: 10
@@ -303,7 +303,12 @@ export default StyleSheet.create({
 		backgroundColor: SECONDARY_COLOR,
 		paddingHorizontal: 20
 	},
+	buttonText: {
+		color: '#F2F2F2'
+	},
 
+
+	
 	// MENU
 	tabButton: {
 		paddingTop: 20,

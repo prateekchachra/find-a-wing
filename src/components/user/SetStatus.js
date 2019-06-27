@@ -1,11 +1,12 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import {View} from 'react-native';
 
 export default class SetStatus extends Component {
     render() {
         return (
-            <div>
-                
-            </div>
+           <View>
+            
+           </View>
         )
     }
 }

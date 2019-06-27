@@ -69,16 +69,18 @@ class  Profile extends Component {
 				<View style={styles.actionsProfile}>
 					<TouchableOpacity style={styles.circledButton}>
 						<Text style={styles.iconButton}>
-							<Icon name="dots-three-vertical" />
+							<Icon name="dots-three-vertical" color="#FFFFFF" />
 						</Text>
 					</TouchableOpacity>
 
 					<TouchableOpacity style={styles.roundedButton}
 					 onPress={this.onChatButtonPress.bind(this)}>
-						<Text style={styles.iconButton}>
-							<Icon name="chat" />
+						<Text style={styles.iconText}>
+							<Icon name="chat" color="#FFFFFF" />
 						</Text>
-						<Text style={styles.textButton}>Start chatting</Text>
+						<Text style={styles.buttonText}> Start chatting
+						
+						</Text>
 					</TouchableOpacity>
 				</View>
 			</ScrollView>

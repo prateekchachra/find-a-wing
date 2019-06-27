@@ -34,7 +34,7 @@ const Matches = () => {
 						data={Demo}
 						keyExtractor={(item, index) => index.toString()}
 						renderItem={({ item }) => (
-							<TouchableOpacity style={{margin: 10}}>
+							<TouchableOpacity style={{margin: 10}} >
 								<CardItem
 									image={item.image}
 									name={item.name}
